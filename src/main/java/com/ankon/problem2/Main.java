@@ -1,6 +1,7 @@
 package com.ankon.problem2;
 
 import com.ankon.problem2.domain.Frequency;
+import com.ankon.problem2.domain.Result;
 import com.ankon.problem2.lexer.Lexer;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ public class Main {
 
         ArrayList<Frequency> set = new ArrayList<>();
         ArrayList<Frequency> tokens = new ArrayList<>();
+        ArrayList<Result> results = new ArrayList<>();
 
         String content = "";
         try {
@@ -45,7 +47,20 @@ public class Main {
                 }
 
                 tokens.add(new Frequency(frequency.getSubString(), count));
-                System.out.println(frequency.getSubString() + " " + count);
+                // System.out.println(frequency.getSubString() + " " + count);
+            }
+
+            for (Frequency token: tokens) {
+                if (token.getFrequency() <= 1)
+                    continue;
+
+                Result result = countScore(token);
+                if (result != null)
+                    results.add(result);
+            }
+
+            for (Result result: results) {
+                System.out.println(result);
             }
 
 //            ArrayList<String> substrings = new ArrayList<>();
@@ -154,6 +169,42 @@ public class Main {
         } else {
             System.out.println(lexer.errorMessage());
         }
+    }
+
+    static Integer lexString(String content) {
+        Lexer lexer = new Lexer(content, true);
+
+        int count = 0;
+
+        // System.out.println("Lexical Analysis");
+        // System.out.println("-----------------");
+        while (!lexer.isExhausted()) {
+            // System.out.printf("%-18s :  %s \n",lexer.currentLexema() , lexer.currentToken());
+            count++;
+            lexer.moveAhead();
+        }
+
+        if (lexer.isSuccessful()) {
+            // System.out.println("Ok! :D");
+            return count;
+        } else {
+            System.out.println(lexer.errorMessage());
+            return -1;
+        }
+    }
+
+    static Result countScore(Frequency frequency) {
+        int tokens = lexString(frequency.getSubString());
+
+        Double score = 0.0;
+        if (tokens != -1)
+            score = Math.log(frequency.getFrequency()) / Math.log(2);
+
+        // System.out.println(score + " " + tokens + " " + frequency.getFrequency() + " " + frequency.getSubString());
+        if (tokens != -1 && !Double.isNaN(score))
+            return new Result(score, tokens, frequency.getFrequency(), frequency.getSubString());
+
+        return null;
     }
 
 }

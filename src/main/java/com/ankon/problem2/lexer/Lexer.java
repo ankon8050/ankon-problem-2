@@ -35,6 +35,26 @@ public class Lexer {
         moveAhead();
     }
 
+    public Lexer(String string, boolean flag) {
+        try {
+            input.append(string);
+        } catch (Exception ex) {
+            exhausted = true;
+            errorMessage = "Could not read string: " + string;
+            return;
+        }
+
+        blankChars.add('\r');
+        blankChars.add('\n');
+        blankChars.add((char) 8);
+        blankChars.add((char) 9);
+        blankChars.add((char) 11);
+        blankChars.add((char) 12);
+        blankChars.add((char) 32);
+
+        moveAhead();
+    }
+
     public void moveAhead() {
         if (exhausted) {
             return;

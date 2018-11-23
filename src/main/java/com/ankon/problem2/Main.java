@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -60,7 +61,7 @@ public class Main {
             }
 
             for (Result result: results) {
-                System.out.println(result);
+                System.out.println(result.getScore() + " " + result.getTokens() + " " + result.getCount() + " " + result.getSourceCode());
             }
 
 //            ArrayList<String> substrings = new ArrayList<>();
@@ -201,8 +202,9 @@ public class Main {
             score = Math.log(frequency.getFrequency()) / Math.log(2);
 
         // System.out.println(score + " " + tokens + " " + frequency.getFrequency() + " " + frequency.getSubString());
+        DecimalFormat df = new DecimalFormat("0.00");
         if (tokens != -1 && !Double.isNaN(score))
-            return new Result(score, tokens, frequency.getFrequency(), frequency.getSubString());
+            return new Result(Double.parseDouble(df.format(score)), tokens, frequency.getFrequency(), frequency.getSubString());
 
         return null;
     }

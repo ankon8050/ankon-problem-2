@@ -28,13 +28,13 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="206" column="65" lean-forward="false" selection-start-line="206" selection-start-column="65" selection-end-line="206" selection-end-column="65" />
+            <state relative-caret-position="373">
+              <caret line="204" column="104" lean-forward="false" selection-start-line="204" selection-start-column="104" selection-end-line="204" selection-end-column="104" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2014#2077#0" expanded="false" />
-                <element signature="e#3050#3061#0" expanded="true" />
-                <element signature="e#3291#3319#0" expanded="false" />
+                <element signature="e#2046#2109#0" expanded="false" />
+                <element signature="e#3082#3093#0" expanded="true" />
+                <element signature="e#3324#3352#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -409,12 +409,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542994352947</updated>
       <workItem from="1542994354391" duration="753000" />
-      <workItem from="1542995942195" duration="7214000" />
+      <workItem from="1542995942195" duration="8562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7967000" />
+    <option name="totallyTimeSpent" value="9315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -494,9 +494,9 @@
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2014#2077#0" expanded="false" />
-            <element signature="e#3050#3061#0" expanded="true" />
-            <element signature="e#3291#3319#0" expanded="false" />
+            <element signature="e#2046#2109#0" expanded="false" />
+            <element signature="e#3082#3093#0" expanded="true" />
+            <element signature="e#3324#3352#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -600,13 +600,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="206" column="65" lean-forward="false" selection-start-line="206" selection-start-column="65" selection-end-line="206" selection-end-column="65" />
+        <state relative-caret-position="373">
+          <caret line="204" column="104" lean-forward="false" selection-start-line="204" selection-start-column="104" selection-end-line="204" selection-end-column="104" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2014#2077#0" expanded="false" />
-            <element signature="e#3050#3061#0" expanded="true" />
-            <element signature="e#3291#3319#0" expanded="false" />
+            <element signature="e#2046#2109#0" expanded="false" />
+            <element signature="e#3082#3093#0" expanded="true" />
+            <element signature="e#3324#3352#0" expanded="false" />
           </folding>
         </state>
       </provider>

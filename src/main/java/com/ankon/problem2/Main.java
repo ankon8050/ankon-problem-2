@@ -11,6 +11,7 @@ import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.regex.Pattern;
 
 import static java.lang.System.in;
 
@@ -90,6 +91,7 @@ public class Main {
 
     static ArrayList<Frequency> getAllUniqueSubset(String str) {
         ArrayList<Frequency> set = new ArrayList<Frequency>();
+
         for (int i = 0; i < str.length(); i++) {
             for (int j = 0; j < str.length() - i; j++) {
                 boolean flag = false;
@@ -98,6 +100,7 @@ public class Main {
 //                if (!set.contains(elem)) {
 //                    set.add(new Frequency(elem, 1));
 //                }
+
 
                 if (elem.isEmpty())
                     continue;
@@ -199,7 +202,7 @@ public class Main {
 
         Double score = 0.0;
         if (tokens != -1)
-            score = Math.log(frequency.getFrequency()) / Math.log(2);
+            score = (Math.log(frequency.getFrequency()) / Math.log(2)) * (Math.log(tokens) / Math.log(2));
 
         // System.out.println(score + " " + tokens + " " + frequency.getFrequency() + " " + frequency.getSubString());
         DecimalFormat df = new DecimalFormat("0.00");

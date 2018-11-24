@@ -122,7 +122,7 @@ public class Main {
     }
 
     static String[] prepareContent() throws IOException {
-        String listOfURL = readFile("Input.rtf", Charset.defaultCharset());
+        String listOfURL = readFile("Input_2.rtf", Charset.defaultCharset());
 
         if (listOfURL.isEmpty())
             return null;

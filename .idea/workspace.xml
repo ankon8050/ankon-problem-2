@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="242b2f08-b880-4955-b19f-295c990140f4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Input_10.rtf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Input_100.rtf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Input.rtf" afterPath="$PROJECT_DIR$/Input_2.rtf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ankon/problem2/Main.class" afterPath="$PROJECT_DIR$/target/classes/com/ankon/problem2/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Credentials.rtf" afterPath="$PROJECT_DIR$/Credentials.rtf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_2.csv" afterPath="$PROJECT_DIR$/test_2.csv" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,36 +32,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="565" column="23" lean-forward="false" selection-start-line="565" selection-start-column="23" selection-end-line="565" selection-end-column="23" />
+            <state relative-caret-position="181">
+              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2499#2621#0" expanded="false" />
                 <element signature="e#3277#3410#0" expanded="false" />
-                <element signature="method#authenticate#0;class#Main#0" expanded="false" />
-                <element signature="method#prepareContent#0;class#Main#0" expanded="false" />
                 <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
-                <element signature="e#4684#4698#0" expanded="false" />
+                <element signature="e#4686#4700#0" expanded="false" />
                 <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
-                <element signature="e#9050#9113#0" expanded="false" />
+                <element signature="e#9052#9115#0" expanded="false" />
                 <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
-                <element signature="e#10848#10856#0" expanded="true" />
+                <element signature="e#10850#10858#0" expanded="true" />
                 <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
-                <element signature="e#11666#11677#0" expanded="true" />
-                <element signature="e#11931#11975#0" expanded="false" />
-                <element signature="e#12282#12325#0" expanded="false" />
-                <element signature="e#12627#12670#0" expanded="false" />
-                <element signature="e#13115#13158#0" expanded="false" />
-                <element signature="e#13215#13282#0" expanded="false" />
-                <element signature="e#13712#13740#0" expanded="false" />
+                <element signature="e#11668#11679#0" expanded="true" />
+                <element signature="e#11933#11977#0" expanded="false" />
+                <element signature="e#12284#12327#0" expanded="false" />
+                <element signature="e#12629#12672#0" expanded="false" />
+                <element signature="e#13117#13160#0" expanded="false" />
+                <element signature="e#13217#13284#0" expanded="false" />
+                <element signature="e#13714#13742#0" expanded="false" />
                 <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
                 <element signature="method#readFile#0;class#Main#0" expanded="false" />
                 <element signature="method#lexFile#0;class#Main#0" expanded="false" />
                 <element signature="method#lexString#0;class#Main#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Input_100.rtf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Input_100.rtf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="39" column="102" lean-forward="false" selection-start-line="39" selection-start-column="102" selection-end-line="39" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Input_10.rtf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Input_10.rtf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Credentials.rtf" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Credentials.rtf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Credentials.rtf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+              <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -152,36 +177,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Token.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/lexer/Token.java">
+      <file leaf-file-name="Input_2.rtf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Input_2.rtf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Input.rtf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Input.rtf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="97" lean-forward="false" selection-start-line="1" selection-start-column="97" selection-end-line="1" selection-end-column="97" />
+            <state relative-caret-position="0">
+              <caret line="0" column="86" lean-forward="false" selection-start-line="0" selection-start-column="86" selection-end-line="0" selection-end-column="86" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/lexer/Lexer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -227,10 +228,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/lexer/Lexer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/domain/Result.java" />
         <option value="$PROJECT_DIR$/Input.rtf" />
-        <option value="$PROJECT_DIR$/Credentials.rtf" />
         <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/domain/ResultSet.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Input_10.rtf" />
+        <option value="$PROJECT_DIR$/Input_2.rtf" />
+        <option value="$PROJECT_DIR$/Input_100.rtf" />
         <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" />
+        <option value="$PROJECT_DIR$/Credentials.rtf" />
       </list>
     </option>
   </component>
@@ -473,12 +477,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542994352947</updated>
       <workItem from="1542994354391" duration="753000" />
-      <workItem from="1542995942195" duration="30154000" />
+      <workItem from="1542995942195" duration="32190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30907000" />
+    <option name="totallyTimeSpent" value="32943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -562,22 +566,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2499#2621#0" expanded="false" />
             <element signature="e#3277#3410#0" expanded="false" />
-            <element signature="method#authenticate#0;class#Main#0" expanded="false" />
-            <element signature="method#prepareContent#0;class#Main#0" expanded="false" />
             <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
-            <element signature="e#4684#4698#0" expanded="false" />
+            <element signature="e#4686#4700#0" expanded="false" />
             <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
-            <element signature="e#9050#9113#0" expanded="false" />
+            <element signature="e#9052#9115#0" expanded="false" />
             <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
-            <element signature="e#10848#10856#0" expanded="true" />
+            <element signature="e#10850#10858#0" expanded="true" />
             <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
-            <element signature="e#11666#11677#0" expanded="true" />
-            <element signature="e#11931#11975#0" expanded="false" />
-            <element signature="e#12282#12325#0" expanded="false" />
-            <element signature="e#12627#12670#0" expanded="false" />
-            <element signature="e#13115#13158#0" expanded="false" />
-            <element signature="e#13215#13282#0" expanded="false" />
-            <element signature="e#13712#13740#0" expanded="false" />
+            <element signature="e#11668#11679#0" expanded="true" />
+            <element signature="e#11933#11977#0" expanded="false" />
+            <element signature="e#12284#12327#0" expanded="false" />
+            <element signature="e#12629#12672#0" expanded="false" />
+            <element signature="e#13117#13160#0" expanded="false" />
+            <element signature="e#13217#13284#0" expanded="false" />
+            <element signature="e#13714#13742#0" expanded="false" />
             <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
             <element signature="method#readFile#0;class#Main#0" expanded="false" />
             <element signature="method#lexFile#0;class#Main#0" expanded="false" />
@@ -631,26 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Credentials.rtf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Input.rtf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="97" lean-forward="false" selection-start-line="1" selection-start-column="97" selection-end-line="1" selection-end-column="97" />
           <folding />
         </state>
       </provider>
@@ -713,35 +699,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Input_10.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Input_100.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="39" column="102" lean-forward="false" selection-start-line="39" selection-start-column="102" selection-end-line="39" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="565" column="23" lean-forward="false" selection-start-line="565" selection-start-column="23" selection-end-line="565" selection-end-column="23" />
+        <state relative-caret-position="181">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2499#2621#0" expanded="false" />
             <element signature="e#3277#3410#0" expanded="false" />
-            <element signature="method#authenticate#0;class#Main#0" expanded="false" />
-            <element signature="method#prepareContent#0;class#Main#0" expanded="false" />
             <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
-            <element signature="e#4684#4698#0" expanded="false" />
+            <element signature="e#4686#4700#0" expanded="false" />
             <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
-            <element signature="e#9050#9113#0" expanded="false" />
+            <element signature="e#9052#9115#0" expanded="false" />
             <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
-            <element signature="e#10848#10856#0" expanded="true" />
+            <element signature="e#10850#10858#0" expanded="true" />
             <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
-            <element signature="e#11666#11677#0" expanded="true" />
-            <element signature="e#11931#11975#0" expanded="false" />
-            <element signature="e#12282#12325#0" expanded="false" />
-            <element signature="e#12627#12670#0" expanded="false" />
-            <element signature="e#13115#13158#0" expanded="false" />
-            <element signature="e#13215#13282#0" expanded="false" />
-            <element signature="e#13712#13740#0" expanded="false" />
+            <element signature="e#11668#11679#0" expanded="true" />
+            <element signature="e#11933#11977#0" expanded="false" />
+            <element signature="e#12284#12327#0" expanded="false" />
+            <element signature="e#12629#12672#0" expanded="false" />
+            <element signature="e#13117#13160#0" expanded="false" />
+            <element signature="e#13217#13284#0" expanded="false" />
+            <element signature="e#13714#13742#0" expanded="false" />
             <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
             <element signature="method#readFile#0;class#Main#0" expanded="false" />
             <element signature="method#lexFile#0;class#Main#0" expanded="false" />
             <element signature="method#lexString#0;class#Main#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Input_2.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="86" lean-forward="false" selection-start-line="0" selection-start-column="86" selection-end-line="0" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Credentials.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

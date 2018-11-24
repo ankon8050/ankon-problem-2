@@ -92,6 +92,7 @@ public class Main {
 //                System.out.println();
 //                System.out.println();
                 System.out.println("--------------------LCS string---------------------");
+                System.out.println("\n\n");
 
                 System.out.println("--------------------LCS set---------------------");
 //                Set<String> cs = longestCommonSubstrings(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
@@ -111,6 +112,11 @@ public class Main {
         System.out.println("Done!");
     }
 
+    /**
+     * Authenticate GitHub credentials
+     * @throws IOException
+     * @throws Exception
+     */
     static void authenticate() throws IOException, Exception {
         String credentials = readFile("Credentials.rtf", Charset.defaultCharset());
 
@@ -124,6 +130,12 @@ public class Main {
         outputFile = split[3];
     }
 
+    /**
+     * Initialize data set from set of URLs
+     *
+     * @return
+     * @throws IOException
+     */
     static String[] prepareContent() throws IOException {
         String listOfURL = readFile(inputFile, Charset.defaultCharset());
 
@@ -135,6 +147,13 @@ public class Main {
         return content;
     }
 
+    /**
+     * LCS to return single string
+     *
+     * @param str1
+     * @param str2
+     * @return
+     */
     static String longestSubstring(String str1, String str2) {
 
         StringBuilder sb = new StringBuilder();
@@ -179,8 +198,15 @@ public class Main {
         }
 
         return sb.toString();
-    } // LCS to return single string
+    }
 
+    /**
+     * LCS to return multiple strings
+     *
+     * @param s
+     * @param t
+     * @return
+     */
     static Set<String> longestCommonSubstrings(String s, String t) {
         int[][] table = new int[s.length()][t.length()];
         int longest = 0;
@@ -204,13 +230,16 @@ public class Main {
             }
         }
         return result;
-    } // LCS to return multiple strings
+    }
 
+    /**
+     * Find out all tokens in "content"
+     * @param content
+     */
     static void generateTokens(String content) {
         ArrayList<Frequency> set = new ArrayList<>();
 
         set = getAllUniqueSubset(content.replaceAll("\\s+", " "));
-        // System.out.println(set.toString());
 
         int lastIndex = 0;
         int count = 0;
@@ -227,8 +256,6 @@ public class Main {
                         count++;
                         lastIndex += frequency.getSubString().length();
                     }
-
-                    // System.out.println(count);
                 }
 
                 Frequency temp = new Frequency(frequency.getSubString(), count);
@@ -260,31 +287,12 @@ public class Main {
                     tokens.add(temp);
                 }
             }
-
-//            ArrayList<String> substrings = new ArrayList<>();
-//            for (int i = 0; i < set.size(); i++) {
-//                substrings.add(set.get(i).trim());
-//            }
-//
-//            HashMap<String, Integer> frequencyMap = new HashMap<String, Integer>();
-//            for (String string: set) {
-//                if (string.replaceAll("\\s", "").length() == 0)
-//                    continue;
-//                if (string.contains("\n"))
-//                    continue;
-//
-//                if(frequencyMap.containsKey(string)) {
-//                    frequencyMap.put(string, frequencyMap.get(string) + 1);
-//                    System.out.println(string + " " + (frequencyMap.get(string)));
-//                }
-//                else {
-//                    frequencyMap.put(string, 1);
-//                    // System.out.println(string + " 1");
-//                }
-//            }
         }
     }
 
+    /**
+     * Generate the result set for each .java file
+     */
     static void generateResultSet() {
         for (Frequency token: tokens) {
             if (token.getFrequency() <= 1) {
@@ -298,10 +306,19 @@ public class Main {
         }
 
         for (Result result: results) {
-//            System.out.println(result.getScore() + " " + result.getTokens() + " " + result.getCount() + " " + result.getSourceCode());
+            /**
+             * Uncomment to check the console trace of result set generated for each file
+             */
+            // System.out.println(result.getScore() + " " + result.getTokens() + " " + result.getCount() + " " + result.getSourceCode());
         }
     }
 
+    /**
+     * Read file from URL
+     *
+     * @param repo
+     * @return
+     */
     static String fetchGitFile(String repo) {
         URL url;
         String file = "";
@@ -331,6 +348,12 @@ public class Main {
         }
     }
 
+    /**
+     * List down all the sequences in "str"
+     *
+     * @param str
+     * @return
+     */
     static ArrayList<Frequency> getAllUniqueSubset(String str) {
         ArrayList<Frequency> set = new ArrayList<Frequency>();
 
@@ -417,6 +440,12 @@ public class Main {
         return set;
     }
 
+    /**
+     * List down all substrings in "str"
+     *
+     * @param str
+     * @return
+     */
     static ArrayList<String> getUniqueSubstrings(String str) {
         ArrayList<String> set = new ArrayList<>();
 
@@ -439,11 +468,24 @@ public class Main {
         return set;
     }
 
+    /**
+     * Read files from local directory
+     *
+     * @param path
+     * @param encoding
+     * @return
+     * @throws IOException
+     */
     static String readFile(String path, Charset encoding) throws IOException {
         byte[] encoded = Files.readAllBytes(Paths.get(path));
         return new String(encoded, encoding);
     }
 
+    /**
+     * Print the tokens and their categories in console
+     *
+     * @param path
+     */
     public static void lexFile(String path) {
         Lexer lexer = new Lexer(path);
 
@@ -461,6 +503,11 @@ public class Main {
         }
     }
 
+    /**
+     * Count the tokens in sequence "content"
+     * @param content
+     * @return
+     */
     static Integer lexString(String content) {
         Lexer lexer = new Lexer(content, true);
 
@@ -483,6 +530,12 @@ public class Main {
         }
     }
 
+    /**
+     * Count the score for each token sequence
+     *
+     * @param frequency
+     * @return
+     */
     static Result countScore(Frequency frequency) {
         int tokens = lexString(frequency.getSubString());
 
@@ -490,7 +543,6 @@ public class Main {
         if (tokens != -1)
             score = (Math.log(frequency.getFrequency()) / Math.log(2)) * (Math.log(tokens) / Math.log(2));
 
-        // System.out.println(score + " " + tokens + " " + frequency.getFrequency() + " " + frequency.getSubString());
         DecimalFormat df = new DecimalFormat("0.00");
         if (tokens != -1 && !Double.isNaN(score))
             return new Result(Double.parseDouble(df.format(score)), tokens, frequency.getFrequency(), frequency.getSubString());
@@ -498,6 +550,9 @@ public class Main {
         return null;
     }
 
+    /**
+     * List down the common sequence in all the files and generate output file
+     */
     static void listCommonSequences() {
         if (resultSets == null || resultSets.size() <= 0)
             return;
@@ -517,7 +572,6 @@ public class Main {
         Set<String> common = intersection(sets);
         if (common != null && common.size() > 0) {
             for (String st: common) {
-                // System.out.println(st);
                 Frequency frequency = new Frequency(st, 0);
                 for (ResultSet resultSet: resultSets) {
                     for (Result result: resultSet.getResults()) {
@@ -570,10 +624,14 @@ public class Main {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-        // System.out.println(intersection(sets).size());
     }
 
+    /**
+     * Set Intersection Operation
+     *
+     * @param lists
+     * @return
+     */
     static Set<String> intersection(List<List<String>> lists) {
         Set<String> intersection = new HashSet<>(lists.get(0));
         for(List<String> list : lists) {

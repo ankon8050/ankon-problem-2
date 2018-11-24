@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="242b2f08-b880-4955-b19f-295c990140f4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Credentials.rtf" afterPath="$PROJECT_DIR$/Credentials.rtf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InputLocal.rtf" afterPath="$PROJECT_DIR$/InputLocal.rtf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,31 +19,49 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="77" column="43" lean-forward="false" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+            <state relative-caret-position="1245">
+              <caret line="134" column="6" lean-forward="false" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#2566#2688#0" expanded="false" />
-                <element signature="e#3344#3477#0" expanded="false" />
+                <element signature="e#3388#3521#0" expanded="false" />
+                <element signature="method#authenticate#0;class#Main#0" expanded="false" />
+                <element signature="method#prepareContent#0;class#Main#0" expanded="false" />
                 <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
-                <element signature="e#4810#4824#0" expanded="false" />
+                <element signature="e#5181#5195#0" expanded="false" />
                 <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
-                <element signature="e#9176#9239#0" expanded="false" />
+                <element signature="method#generateTokens#0;class#Main#0" expanded="false" />
+                <element signature="method#generateResultSet#0;class#Main#0" expanded="false" />
                 <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
-                <element signature="e#10974#10982#0" expanded="true" />
+                <element signature="e#10734#10742#0" expanded="true" />
                 <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
-                <element signature="e#11792#11803#0" expanded="true" />
-                <element signature="e#12057#12101#0" expanded="false" />
-                <element signature="e#12408#12451#0" expanded="false" />
-                <element signature="e#12753#12796#0" expanded="false" />
-                <element signature="e#13241#13284#0" expanded="false" />
-                <element signature="e#13341#13408#0" expanded="false" />
-                <element signature="e#13838#13866#0" expanded="false" />
+                <element signature="e#11652#11663#0" expanded="true" />
+                <element signature="e#11917#11961#0" expanded="false" />
+                <element signature="e#12268#12311#0" expanded="false" />
+                <element signature="e#12613#12656#0" expanded="false" />
+                <element signature="e#13101#13144#0" expanded="false" />
+                <element signature="e#13201#13268#0" expanded="false" />
+                <element signature="e#13698#13726#0" expanded="false" />
                 <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
                 <element signature="method#readFile#0;class#Main#0" expanded="false" />
                 <element signature="method#lexFile#0;class#Main#0" expanded="false" />
                 <element signature="method#lexString#0;class#Main#0" expanded="false" />
+                <element signature="method#countScore#0;class#Main#0" expanded="false" />
+                <element signature="method#listCommonSequences#0;class#Main#0" expanded="false" />
+                <element signature="method#intersection#0;class#Main#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="345">
+                <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -65,30 +82,6 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultSet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/domain/ResultSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-              <folding>
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-                <element signature="e#622#623#0" expanded="true" />
-                <element signature="e#665#666#0" expanded="true" />
-                <element signature="e#699#700#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-                <element signature="e#757#758#0" expanded="true" />
-                <element signature="e#797#798#0" expanded="true" />
-                <element signature="e#829#830#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#961#962#0" expanded="true" />
-                <element signature="e#999#1000#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -150,7 +143,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputLocal.rtf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InputLocal.rtf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InputLocal.rtf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -240,8 +233,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Domain.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Input.java" />
         <option value="$PROJECT_DIR$/Credentials.rtf" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" />
         <option value="$PROJECT_DIR$/InputLocal.rtf" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -494,12 +488,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542994352947</updated>
       <workItem from="1542994354391" duration="753000" />
-      <workItem from="1542995942195" duration="32820000" />
+      <workItem from="1542995942195" duration="33806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33573000" />
+    <option name="totallyTimeSpent" value="34559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -514,7 +508,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4121152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4121152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -580,27 +574,32 @@
         <state relative-caret-position="375">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#2566#2688#0" expanded="false" />
-            <element signature="e#3344#3477#0" expanded="false" />
+            <element signature="e#3388#3521#0" expanded="false" />
+            <element signature="method#authenticate#0;class#Main#0" expanded="false" />
+            <element signature="method#prepareContent#0;class#Main#0" expanded="false" />
             <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
-            <element signature="e#4810#4824#0" expanded="false" />
+            <element signature="e#5181#5195#0" expanded="false" />
             <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
-            <element signature="e#9176#9239#0" expanded="false" />
+            <element signature="method#generateTokens#0;class#Main#0" expanded="false" />
+            <element signature="method#generateResultSet#0;class#Main#0" expanded="false" />
             <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
-            <element signature="e#10974#10982#0" expanded="true" />
+            <element signature="e#10734#10742#0" expanded="true" />
             <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
-            <element signature="e#11792#11803#0" expanded="true" />
-            <element signature="e#12057#12101#0" expanded="false" />
-            <element signature="e#12408#12451#0" expanded="false" />
-            <element signature="e#12753#12796#0" expanded="false" />
-            <element signature="e#13241#13284#0" expanded="false" />
-            <element signature="e#13341#13408#0" expanded="false" />
-            <element signature="e#13838#13866#0" expanded="false" />
+            <element signature="e#11652#11663#0" expanded="true" />
+            <element signature="e#11917#11961#0" expanded="false" />
+            <element signature="e#12268#12311#0" expanded="false" />
+            <element signature="e#12613#12656#0" expanded="false" />
+            <element signature="e#13101#13144#0" expanded="false" />
+            <element signature="e#13201#13268#0" expanded="false" />
+            <element signature="e#13698#13726#0" expanded="false" />
             <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
             <element signature="method#readFile#0;class#Main#0" expanded="false" />
             <element signature="method#lexFile#0;class#Main#0" expanded="false" />
             <element signature="method#lexString#0;class#Main#0" expanded="false" />
+            <element signature="method#countScore#0;class#Main#0" expanded="false" />
+            <element signature="method#listCommonSequences#0;class#Main#0" expanded="false" />
+            <element signature="method#intersection#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -766,36 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="77" column="43" lean-forward="false" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2566#2688#0" expanded="false" />
-            <element signature="e#3344#3477#0" expanded="false" />
-            <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
-            <element signature="e#4810#4824#0" expanded="false" />
-            <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
-            <element signature="e#9176#9239#0" expanded="false" />
-            <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
-            <element signature="e#10974#10982#0" expanded="true" />
-            <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
-            <element signature="e#11792#11803#0" expanded="true" />
-            <element signature="e#12057#12101#0" expanded="false" />
-            <element signature="e#12408#12451#0" expanded="false" />
-            <element signature="e#12753#12796#0" expanded="false" />
-            <element signature="e#13241#13284#0" expanded="false" />
-            <element signature="e#13341#13408#0" expanded="false" />
-            <element signature="e#13838#13866#0" expanded="false" />
-            <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
-            <element signature="method#readFile#0;class#Main#0" expanded="false" />
-            <element signature="method#lexFile#0;class#Main#0" expanded="false" />
-            <element signature="method#lexString#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Credentials.rtf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -809,6 +778,52 @@
         <state relative-caret-position="15">
           <caret line="1" column="99" lean-forward="false" selection-start-line="1" selection-start-column="99" selection-end-line="1" selection-end-column="99" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="134" column="6" lean-forward="false" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
+          <folding>
+            <element signature="e#2566#2688#0" expanded="false" />
+            <element signature="e#3388#3521#0" expanded="false" />
+            <element signature="method#authenticate#0;class#Main#0" expanded="false" />
+            <element signature="method#prepareContent#0;class#Main#0" expanded="false" />
+            <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
+            <element signature="e#5181#5195#0" expanded="false" />
+            <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
+            <element signature="method#generateTokens#0;class#Main#0" expanded="false" />
+            <element signature="method#generateResultSet#0;class#Main#0" expanded="false" />
+            <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
+            <element signature="e#10734#10742#0" expanded="true" />
+            <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
+            <element signature="e#11652#11663#0" expanded="true" />
+            <element signature="e#11917#11961#0" expanded="false" />
+            <element signature="e#12268#12311#0" expanded="false" />
+            <element signature="e#12613#12656#0" expanded="false" />
+            <element signature="e#13101#13144#0" expanded="false" />
+            <element signature="e#13201#13268#0" expanded="false" />
+            <element signature="e#13698#13726#0" expanded="false" />
+            <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
+            <element signature="method#readFile#0;class#Main#0" expanded="false" />
+            <element signature="method#lexFile#0;class#Main#0" expanded="false" />
+            <element signature="method#lexString#0;class#Main#0" expanded="false" />
+            <element signature="method#countScore#0;class#Main#0" expanded="false" />
+            <element signature="method#listCommonSequences#0;class#Main#0" expanded="false" />
+            <element signature="method#intersection#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="345">
+            <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

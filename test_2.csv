@@ -1,0 +1,9 @@
+Score,Tokens,Count,Source Code
+0.0,1,7,void
+0.0,1,14,public
+0.0,1,42,{
+0.0,1,29,String
+0.0,1,16,+
+0.0,1,53,=
+0.0,1,43,}
+0.0,1,10,return

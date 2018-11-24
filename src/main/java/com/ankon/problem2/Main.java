@@ -5,9 +5,7 @@ import com.ankon.problem2.domain.Result;
 import com.ankon.problem2.domain.ResultSet;
 import com.ankon.problem2.lexer.Lexer;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
@@ -49,9 +47,11 @@ public class Main {
                 contents = new String[links.length];
 
                 for (int i = 0; i < links.length; i++) {
+                    System.out.println("Importing file: " + (i + 1));
                     contents[i] = fetchGitFile(links[i]);
                 }
 
+                System.out.println("\n");
                 System.out.println("--------------------Substring Tokenize---------------------");
                 for (String content: contents) {
                     results = new ArrayList<>();
@@ -536,6 +536,36 @@ public class Main {
 
         for (Result result: commonSequences) {
             System.out.println(result);
+        }
+
+        try {
+            PrintWriter pw = new PrintWriter(new File("test_2.csv"));
+            StringBuilder sb = new StringBuilder();
+
+            sb.append("Score");
+            sb.append(",");
+            sb.append("Tokens");
+            sb.append(",");
+            sb.append("Count");
+            sb.append(",");
+            sb.append("Source Code");
+            sb.append("\n");
+
+            for (Result result: commonSequences) {
+                sb.append(result.getScore());
+                sb.append(",");
+                sb.append(result.getTokens());
+                sb.append(",");
+                sb.append(result.getCount());
+                sb.append(",");
+                sb.append(result.getSourceCode().replaceAll(",", " "));
+                sb.append("\n");
+            }
+
+            pw.write(sb.toString());
+            pw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
 
         // System.out.println(intersection(sets).size());

@@ -47,45 +47,58 @@ public class Main {
                     contents[i] = fetchGitFile(links[i]);
                 }
 
-                String lcs = longestSubstring(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
+                System.out.println("--------------------Substring Tokenize---------------------");
+                for (String content: contents) {
+                    results = new ArrayList<>();
+                    tokens = new ArrayList<>();
 
-                Set<String> cs = longestCommonSubstrings(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
+                    String[] strings = content.split("\n");
 
-                int count = 0;
+                    if (strings.length > 0) {
+                        for (String string : strings) {
+                            generateTokens(string.replaceAll("\\s+", " "));
+                        }
 
-                if (lcs != null && !lcs.isEmpty()) {
-                    count += StringUtils.countMatches(contents[0], lcs);
-                    count += StringUtils.countMatches(contents[1], lcs);
-                }
-
-                Frequency frequency = new Frequency(lcs, count);
-                System.out.println(countScore(frequency));
-                System.out.println();
-                System.out.println();
-
-                if (cs != null && cs.size() > 0) {
-                    for (String st: cs) {
-                        System.out.println(st);
+                        generateResultSet();
                     }
+
+                    System.out.println("\n\n");
                 }
+                System.out.println("--------------------Substring Tokenize---------------------");
+
+                System.out.println("--------------------LCS string---------------------");
+//                String lcs = longestSubstring(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
+//
+//                int count = 0;
+//
+//                if (lcs != null && !lcs.isEmpty()) {
+//                    count += StringUtils.countMatches(contents[0], lcs);
+//                    count += StringUtils.countMatches(contents[1], lcs);
+//                }
+//
+//                Frequency frequency = new Frequency(lcs, count);
+//                System.out.println(countScore(frequency));
+//                System.out.println();
+//                System.out.println();
+                System.out.println("--------------------LCS string---------------------");
+
+                System.out.println("--------------------LCS set---------------------");
+//                Set<String> cs = longestCommonSubstrings(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
+//
+//                if (cs != null && cs.size() > 0) {
+//                    for (String st: cs) {
+//                        System.out.println(st);
+//                    }
+//                }
+                System.out.println("--------------------LCS set---------------------");
             }
+
+
 //            contents[0] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/FetchCommit.java");
 //            contents[1] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/domain/Result.java");
 
-//            content = fetchGitFile();
-//            content1 = readFile("Input.java", Charset.defaultCharset());
-
-//            String[] contents = content.split("\n");
-//
-//            // System.out.println(contents.length);
-//            if (contents != null && contents.length > 0) {
-//                for (String string: contents) {
-//                    // System.out.println(string);
-//                    generateTokens(string);
-//                }
-//
-//                generateResultSet();
-//            }
+//            String content = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/FetchCommit.java");
+//            String content = readFile("Input.java", Charset.defaultCharset());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -159,7 +172,7 @@ public class Main {
         }
 
         return sb.toString();
-    }
+    } // LCS to return single string
 
     static Set<String> longestCommonSubstrings(String s, String t) {
         int[][] table = new int[s.length()][t.length()];
@@ -184,12 +197,12 @@ public class Main {
             }
         }
         return result;
-    }
+    } // LCS to return multiple strings
 
     static void generateTokens(String content) {
         ArrayList<Frequency> set = new ArrayList<>();
 
-        set = getAllUniqueSubset(content);
+        set = getAllUniqueSubset(content.replaceAll("\\s+", " "));
         // System.out.println(set.toString());
 
         int lastIndex = 0;
@@ -212,10 +225,18 @@ public class Main {
                 }
 
                 Frequency temp = new Frequency(frequency.getSubString(), count);
+                String subString = temp.getSubString();
+                temp.setSubString(temp.getSubString().trim());
 
-                boolean flag = false;
+                boolean flag = false, skip = false;
                 int k = 0;
                 for ( ; k < tokens.size(); k++) {
+                    if (!tokens.get(k).getSubString().equals(subString)
+                            && tokens.get(k).getSubString().equals(temp.getSubString())) {
+                        skip = true;
+                        break;
+                    }
+
                     if (tokens.get(k).getSubString().equals(temp.getSubString())) {
                         flag = true;
                         break;
@@ -225,16 +246,16 @@ public class Main {
                 if (flag) {
                     temp = tokens.get(k);
                     tokens.remove(k);
-                    temp.setFrequency(frequency.getFrequency() + 1);
+                    temp.setFrequency(temp.getFrequency() + 1);
+                    tokens.add(temp);
 
                     // System.out.println(frequency);
-                } else {
+                } else if (!flag && !skip) {
                     temp = new Frequency(temp.getSubString(), 1);
+                    tokens.add(temp);
 
                     // System.out.println(frequency);
                 }
-
-                tokens.add(temp);
                 // System.out.println(temp.getSubString() + " " + count);
             }
 
@@ -310,6 +331,8 @@ public class Main {
         ArrayList<Frequency> set = new ArrayList<Frequency>();
 
         // System.out.println(str.length());
+
+        str.replaceAll("\\s+", " ");
 
         for (int i = 0; i < str.length(); i++) {
             for (int j = 0; j < str.length() - i; j++) {

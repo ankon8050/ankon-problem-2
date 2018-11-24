@@ -13,38 +13,65 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
+import java.util.*;
+
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang.StringUtils;
 
-import java.util.HashMap;
-import java.util.List;
 import java.util.regex.Pattern;
 
+import static java.lang.System.exit;
 import static java.lang.System.in;
 
 public class Main {
     static ArrayList<Result> results = new ArrayList<>();
     static ArrayList<Frequency> tokens = new ArrayList<>();
 
+    static String username, password;
+
     public static void main(String[] args) {
-        String[] contents = new String[2];
+        try {
+            authenticate();
+        } catch (Exception e) {
+            e.printStackTrace();
+            exit(0);
+        }
 
         try {
-            contents[0] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/FetchCommit.java");
-            contents[1] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/domain/Result.java");
+            String[] links = prepareContent();
+            String[] contents;
+            if (links != null && links.length > 0) {
+                contents = new String[links.length];
 
-            String lcs = longestSubstring(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
+                for (int i = 0; i < links.length; i++) {
+                    contents[i] = fetchGitFile(links[i]);
+                }
 
-            int count = 0;
+                String lcs = longestSubstring(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
 
-            if (lcs != null && !lcs.isEmpty()) {
-                count += StringUtils.countMatches(contents[0], lcs);
-                count += StringUtils.countMatches(contents[1], lcs);
+                Set<String> cs = longestCommonSubstrings(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
+
+                int count = 0;
+
+                if (lcs != null && !lcs.isEmpty()) {
+                    count += StringUtils.countMatches(contents[0], lcs);
+                    count += StringUtils.countMatches(contents[1], lcs);
+                }
+
+                Frequency frequency = new Frequency(lcs, count);
+                System.out.println(countScore(frequency));
+                System.out.println();
+                System.out.println();
+
+                if (cs != null && cs.size() > 0) {
+                    for (String st: cs) {
+                        System.out.println(st);
+                    }
+                }
             }
+//            contents[0] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/FetchCommit.java");
+//            contents[1] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/domain/Result.java");
 
-            Frequency frequency = new Frequency(lcs, count);
-            System.out.println(countScore(frequency));
 //            content = fetchGitFile();
 //            content1 = readFile("Input.java", Charset.defaultCharset());
 
@@ -66,7 +93,29 @@ public class Main {
         System.out.println("Done!");
     }
 
-     static String longestSubstring(String str1, String str2) {
+    static void authenticate() throws IOException, Exception {
+        String credentials = readFile("Credentials.rtf", Charset.defaultCharset());
+
+        if (credentials.isEmpty())
+            throw new Exception("Credentials not found!");
+
+        String[] split = credentials.split("\n");
+        username = split[0];
+        password = split[1];
+    }
+
+    static String[] prepareContent() throws IOException {
+        String listOfURL = readFile("Input.rtf", Charset.defaultCharset());
+
+        if (listOfURL.isEmpty())
+            return null;
+
+        String[] content = listOfURL.split("\n");
+
+        return content;
+    }
+
+    static String longestSubstring(String str1, String str2) {
 
         StringBuilder sb = new StringBuilder();
         if (str1 == null || str1.isEmpty() || str2 == null || str2.isEmpty())
@@ -102,11 +151,39 @@ public class Main {
                             sb = new StringBuilder();
                             sb.append(str1.substring(lastSubsBegin, i + 1));
                         }
+
+                        // System.out.println(sb.toString());
                     }
                 }
-            }}
+            }
+        }
 
         return sb.toString();
+    }
+
+    static Set<String> longestCommonSubstrings(String s, String t) {
+        int[][] table = new int[s.length()][t.length()];
+        int longest = 0;
+        Set<String> result = new HashSet<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < t.length(); j++) {
+                if (s.charAt(i) != t.charAt(j)) {
+                    continue;
+                }
+
+                table[i][j] = (i == 0 || j == 0) ? 1
+                        : 1 + table[i - 1][j - 1];
+                if (table[i][j] > longest) {
+                    longest = table[i][j];
+                    result.clear();
+                }
+                if (table[i][j] == longest) {
+                    result.add(s.substring(i - longest + 1, i + 1));
+                }
+            }
+        }
+        return result;
     }
 
     static void generateTokens(String content) {
@@ -202,7 +279,7 @@ public class Main {
 
     static String fetchGitFile(String repo) {
         URL url;
-        String username = "ankon", password = "16171726", file = "";
+        String file = "";
 
         try {
             url = new URL(repo);

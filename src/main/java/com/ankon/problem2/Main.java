@@ -15,6 +15,8 @@ import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang.StringUtils;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -32,7 +34,17 @@ public class Main {
             contents[0] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/FetchCommit.java");
             contents[1] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/domain/Result.java");
 
-            System.out.println(longestSubstring(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " ")));
+            String lcs = longestSubstring(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
+
+            int count = 0;
+
+            if (lcs != null && !lcs.isEmpty()) {
+                count += StringUtils.countMatches(contents[0], lcs);
+                count += StringUtils.countMatches(contents[1], lcs);
+            }
+
+            Frequency frequency = new Frequency(lcs, count);
+            System.out.println(countScore(frequency));
 //            content = fetchGitFile();
 //            content1 = readFile("Input.java", Charset.defaultCharset());
 

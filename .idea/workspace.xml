@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="242b2f08-b880-4955-b19f-295c990140f4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Domain.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Input.java" afterPath="$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Input.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Credentials.rtf" afterPath="$PROJECT_DIR$/Credentials.rtf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InputLocal.rtf" afterPath="$PROJECT_DIR$/InputLocal.rtf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,39 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+            <state relative-caret-position="341">
+              <caret line="77" column="43" lean-forward="false" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2499#2621#0" expanded="false" />
-                <element signature="e#3277#3410#0" expanded="false" />
+                <element signature="e#2566#2688#0" expanded="false" />
+                <element signature="e#3344#3477#0" expanded="false" />
                 <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
-                <element signature="e#4686#4700#0" expanded="false" />
+                <element signature="e#4810#4824#0" expanded="false" />
                 <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
-                <element signature="e#9052#9115#0" expanded="false" />
+                <element signature="e#9176#9239#0" expanded="false" />
                 <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
-                <element signature="e#10850#10858#0" expanded="true" />
+                <element signature="e#10974#10982#0" expanded="true" />
                 <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
-                <element signature="e#11668#11679#0" expanded="true" />
-                <element signature="e#11933#11977#0" expanded="false" />
-                <element signature="e#12284#12327#0" expanded="false" />
-                <element signature="e#12629#12672#0" expanded="false" />
-                <element signature="e#13117#13160#0" expanded="false" />
-                <element signature="e#13217#13284#0" expanded="false" />
-                <element signature="e#13714#13742#0" expanded="false" />
+                <element signature="e#11792#11803#0" expanded="true" />
+                <element signature="e#12057#12101#0" expanded="false" />
+                <element signature="e#12408#12451#0" expanded="false" />
+                <element signature="e#12753#12796#0" expanded="false" />
+                <element signature="e#13241#13284#0" expanded="false" />
+                <element signature="e#13341#13408#0" expanded="false" />
+                <element signature="e#13838#13866#0" expanded="false" />
                 <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
                 <element signature="method#readFile#0;class#Main#0" expanded="false" />
                 <element signature="method#lexFile#0;class#Main#0" expanded="false" />
@@ -105,8 +96,8 @@
       <file leaf-file-name="Credentials.rtf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Credentials.rtf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="45">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -142,10 +133,9 @@
       <file leaf-file-name="Input.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Input.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="90">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding>
-                <element signature="e#123#124#0" expanded="true" />
                 <element signature="e#149#150#0" expanded="true" />
                 <element signature="e#282#283#0" expanded="true" />
                 <element signature="e#306#307#0" expanded="true" />
@@ -160,12 +150,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Domain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InputLocal.rtf" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/InputLocal.rtf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="99" lean-forward="false" selection-start-line="1" selection-start-column="99" selection-end-line="1" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Domain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Domain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="540">
+              <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+              <folding>
+                <element signature="e#155#156#0" expanded="true" />
+                <element signature="e#181#182#0" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+                <element signature="e#448#449#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -226,10 +237,11 @@
         <option value="$PROJECT_DIR$/Input_10.rtf" />
         <option value="$PROJECT_DIR$/Input_2.rtf" />
         <option value="$PROJECT_DIR$/Input_100.rtf" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" />
-        <option value="$PROJECT_DIR$/Credentials.rtf" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Input.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Domain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Input.java" />
+        <option value="$PROJECT_DIR$/Credentials.rtf" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java" />
+        <option value="$PROJECT_DIR$/InputLocal.rtf" />
       </list>
     </option>
   </component>
@@ -482,12 +494,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542994352947</updated>
       <workItem from="1542994354391" duration="753000" />
-      <workItem from="1542995942195" duration="32381000" />
+      <workItem from="1542995942195" duration="32820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33134000" />
+    <option name="totallyTimeSpent" value="33573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
@@ -502,7 +514,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4121152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4121152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -569,22 +581,22 @@
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2499#2621#0" expanded="false" />
-            <element signature="e#3277#3410#0" expanded="false" />
+            <element signature="e#2566#2688#0" expanded="false" />
+            <element signature="e#3344#3477#0" expanded="false" />
             <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
-            <element signature="e#4686#4700#0" expanded="false" />
+            <element signature="e#4810#4824#0" expanded="false" />
             <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
-            <element signature="e#9052#9115#0" expanded="false" />
+            <element signature="e#9176#9239#0" expanded="false" />
             <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
-            <element signature="e#10850#10858#0" expanded="true" />
+            <element signature="e#10974#10982#0" expanded="true" />
             <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
-            <element signature="e#11668#11679#0" expanded="true" />
-            <element signature="e#11933#11977#0" expanded="false" />
-            <element signature="e#12284#12327#0" expanded="false" />
-            <element signature="e#12629#12672#0" expanded="false" />
-            <element signature="e#13117#13160#0" expanded="false" />
-            <element signature="e#13217#13284#0" expanded="false" />
-            <element signature="e#13714#13742#0" expanded="false" />
+            <element signature="e#11792#11803#0" expanded="true" />
+            <element signature="e#12057#12101#0" expanded="false" />
+            <element signature="e#12408#12451#0" expanded="false" />
+            <element signature="e#12753#12796#0" expanded="false" />
+            <element signature="e#13241#13284#0" expanded="false" />
+            <element signature="e#13341#13408#0" expanded="false" />
+            <element signature="e#13838#13866#0" expanded="false" />
             <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
             <element signature="method#readFile#0;class#Main#0" expanded="false" />
             <element signature="method#lexFile#0;class#Main#0" expanded="false" />
@@ -709,36 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2499#2621#0" expanded="false" />
-            <element signature="e#3277#3410#0" expanded="false" />
-            <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
-            <element signature="e#4686#4700#0" expanded="false" />
-            <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
-            <element signature="e#9052#9115#0" expanded="false" />
-            <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
-            <element signature="e#10850#10858#0" expanded="true" />
-            <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
-            <element signature="e#11668#11679#0" expanded="true" />
-            <element signature="e#11933#11977#0" expanded="false" />
-            <element signature="e#12284#12327#0" expanded="false" />
-            <element signature="e#12629#12672#0" expanded="false" />
-            <element signature="e#13117#13160#0" expanded="false" />
-            <element signature="e#13217#13284#0" expanded="false" />
-            <element signature="e#13714#13742#0" expanded="false" />
-            <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
-            <element signature="method#readFile#0;class#Main#0" expanded="false" />
-            <element signature="method#lexFile#0;class#Main#0" expanded="false" />
-            <element signature="method#lexString#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Input_2.rtf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -747,20 +729,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Credentials.rtf">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Domain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="540">
+          <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Input.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
-            <element signature="e#123#124#0" expanded="true" />
             <element signature="e#149#150#0" expanded="true" />
             <element signature="e#282#283#0" expanded="true" />
             <element signature="e#306#307#0" expanded="true" />
@@ -774,10 +766,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/testcases/Domain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ankon/problem2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        <state relative-caret-position="341">
+          <caret line="77" column="43" lean-forward="false" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2566#2688#0" expanded="false" />
+            <element signature="e#3344#3477#0" expanded="false" />
+            <element signature="method#longestSubstring#0;class#Main#0" expanded="false" />
+            <element signature="e#4810#4824#0" expanded="false" />
+            <element signature="method#longestCommonSubstrings#0;class#Main#0" expanded="false" />
+            <element signature="e#9176#9239#0" expanded="false" />
+            <element signature="method#fetchGitFile#0;class#Main#0" expanded="false" />
+            <element signature="e#10974#10982#0" expanded="true" />
+            <element signature="method#getAllUniqueSubset#0;class#Main#0" expanded="false" />
+            <element signature="e#11792#11803#0" expanded="true" />
+            <element signature="e#12057#12101#0" expanded="false" />
+            <element signature="e#12408#12451#0" expanded="false" />
+            <element signature="e#12753#12796#0" expanded="false" />
+            <element signature="e#13241#13284#0" expanded="false" />
+            <element signature="e#13341#13408#0" expanded="false" />
+            <element signature="e#13838#13866#0" expanded="false" />
+            <element signature="method#getUniqueSubstrings#0;class#Main#0" expanded="false" />
+            <element signature="method#readFile#0;class#Main#0" expanded="false" />
+            <element signature="method#lexFile#0;class#Main#0" expanded="false" />
+            <element signature="method#lexString#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Credentials.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InputLocal.rtf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="99" lean-forward="false" selection-start-line="1" selection-start-column="99" selection-end-line="1" selection-end-column="99" />
           <folding />
         </state>
       </provider>

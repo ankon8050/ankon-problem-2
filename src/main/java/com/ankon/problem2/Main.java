@@ -30,7 +30,7 @@ public class Main {
 
     static List<ResultSet> resultSets = new ArrayList<>();
 
-    static String username, password;
+    static String username, password, inputFile, outputFile;
 
     public static void main(String[] args) {
         try {
@@ -75,6 +75,7 @@ public class Main {
                 listCommonSequences();
 
                 System.out.println("--------------------Substring Tokenize---------------------");
+                System.out.println("\n\n");
 
                 System.out.println("--------------------LCS string---------------------");
 //                String lcs = longestSubstring(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " "));
@@ -119,10 +120,12 @@ public class Main {
         String[] split = credentials.split("\n");
         username = split[0];
         password = split[1];
+        inputFile = split[2];
+        outputFile = split[3];
     }
 
     static String[] prepareContent() throws IOException {
-        String listOfURL = readFile("Input_2.rtf", Charset.defaultCharset());
+        String listOfURL = readFile(inputFile, Charset.defaultCharset());
 
         if (listOfURL.isEmpty())
             return null;
@@ -539,7 +542,7 @@ public class Main {
         }
 
         try {
-            PrintWriter pw = new PrintWriter(new File("test_2.csv"));
+            PrintWriter pw = new PrintWriter(new File(outputFile));
             StringBuilder sb = new StringBuilder();
 
             sb.append("Score");

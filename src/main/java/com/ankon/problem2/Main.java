@@ -4,32 +4,104 @@ import com.ankon.problem2.domain.Frequency;
 import com.ankon.problem2.domain.Result;
 import com.ankon.problem2.lexer.Lexer;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import org.apache.commons.codec.binary.Base64;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import static java.lang.System.in;
 
 public class Main {
+    static ArrayList<Result> results = new ArrayList<>();
+    static ArrayList<Frequency> tokens = new ArrayList<>();
 
     public static void main(String[] args) {
+        String[] contents = new String[2];
 
-        ArrayList<Frequency> set = new ArrayList<>();
-        ArrayList<Frequency> tokens = new ArrayList<>();
-        ArrayList<Result> results = new ArrayList<>();
-
-        String content = "";
         try {
-            content = readFile("Input.java", Charset.defaultCharset());
-            set = getAllUniqueSubset(content);
-        } catch (IOException e) {
+            contents[0] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/FetchCommit.java");
+            contents[1] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/domain/Result.java");
+
+            System.out.println(longestSubstring(contents[0].replaceAll("\\s+", " "), contents[1].replaceAll("\\s+", " ")));
+//            content = fetchGitFile();
+//            content1 = readFile("Input.java", Charset.defaultCharset());
+
+//            String[] contents = content.split("\n");
+//
+//            // System.out.println(contents.length);
+//            if (contents != null && contents.length > 0) {
+//                for (String string: contents) {
+//                    // System.out.println(string);
+//                    generateTokens(string);
+//                }
+//
+//                generateResultSet();
+//            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
+        System.out.println("Done!");
+    }
+
+     static String longestSubstring(String str1, String str2) {
+
+        StringBuilder sb = new StringBuilder();
+        if (str1 == null || str1.isEmpty() || str2 == null || str2.isEmpty())
+            return "";
+
+        // ignore case
+        // str1 = str1.toLowerCase();
+        // str2 = str2.toLowerCase();
+
+        // java initializes them already with 0
+        int[][] num = new int[str1.length()][str2.length()];
+        int maxlen = 0;
+        int lastSubsBegin = 0;
+
+        for (int i = 0; i < str1.length(); i++) {
+            for (int j = 0; j < str2.length(); j++) {
+                if (str1.charAt(i) == str2.charAt(j)) {
+                    if ((i == 0) || (j == 0))
+                        num[i][j] = 1;
+                    else
+                        num[i][j] = 1 + num[i - 1][j - 1];
+
+                    if (num[i][j] > maxlen) {
+                        maxlen = num[i][j];
+                        // generate substring from str1 => i
+                        int thisSubsBegin = i - num[i][j] + 1;
+                        if (lastSubsBegin == thisSubsBegin) {
+                            //if the current LCS is the same as the last time this block ran
+                            sb.append(str1.charAt(i));
+                        } else {
+                            //this block resets the string builder if a different LCS is found
+                            lastSubsBegin = thisSubsBegin;
+                            sb = new StringBuilder();
+                            sb.append(str1.substring(lastSubsBegin, i + 1));
+                        }
+                    }
+                }
+            }}
+
+        return sb.toString();
+    }
+
+    static void generateTokens(String content) {
+        ArrayList<Frequency> set = new ArrayList<>();
+
+        set = getAllUniqueSubset(content);
+        // System.out.println(set.toString());
 
         int lastIndex = 0;
         int count = 0;
@@ -46,23 +118,35 @@ public class Main {
                         count++;
                         lastIndex += frequency.getSubString().length();
                     }
+
+                    // System.out.println(count);
                 }
 
-                tokens.add(new Frequency(frequency.getSubString(), count));
-                // System.out.println(frequency.getSubString() + " " + count);
-            }
+                Frequency temp = new Frequency(frequency.getSubString(), count);
 
-            for (Frequency token: tokens) {
-                if (token.getFrequency() <= 1)
-                    continue;
+                boolean flag = false;
+                int k = 0;
+                for ( ; k < tokens.size(); k++) {
+                    if (tokens.get(k).getSubString().equals(temp.getSubString())) {
+                        flag = true;
+                        break;
+                    }
+                }
 
-                Result result = countScore(token);
-                if (result != null)
-                    results.add(result);
-            }
+                if (flag) {
+                    temp = tokens.get(k);
+                    tokens.remove(k);
+                    temp.setFrequency(frequency.getFrequency() + 1);
 
-            for (Result result: results) {
-                System.out.println(result.getScore() + " " + result.getTokens() + " " + result.getCount() + " " + result.getSourceCode());
+                    // System.out.println(frequency);
+                } else {
+                    temp = new Frequency(temp.getSubString(), 1);
+
+                    // System.out.println(frequency);
+                }
+
+                tokens.add(temp);
+                // System.out.println(temp.getSubString() + " " + count);
             }
 
 //            ArrayList<String> substrings = new ArrayList<>();
@@ -89,18 +173,62 @@ public class Main {
         }
     }
 
+    static void generateResultSet() {
+        for (Frequency token: tokens) {
+            if (token.getFrequency() <= 1)
+                continue;
+
+            Result result = countScore(token);
+            if (result != null && result.getScore() != 0.0)
+                results.add(result);
+        }
+
+        for (Result result: results) {
+            System.out.println(result.getScore() + " " + result.getTokens() + " " + result.getCount() + " " + result.getSourceCode());
+        }
+    }
+
+    static String fetchGitFile(String repo) {
+        URL url;
+        String username = "ankon", password = "16171726", file = "";
+
+        try {
+            url = new URL(repo);
+            URLConnection uc;
+            uc = url.openConnection();
+
+            uc.setRequestProperty("X-Requested-With", "Curl");
+            ArrayList<String> list = new ArrayList<String>();
+            String userpass = username + ":" + password;
+            String basicAuth = "Basic " + new String(new Base64().encode(userpass.getBytes())); //needs Base64 encoder, apache.commons.codec
+            uc.setRequestProperty("Authorization", basicAuth);
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(uc.getInputStream()));
+            String line = null;
+            while ((line = reader.readLine()) != null)
+                file=file+line+"\n";
+            // System.out.println(file);
+            return file;
+
+        } catch (IOException e) {
+            System.out.println("Wrong username and password");
+            return null;
+
+        }
+    }
+
     static ArrayList<Frequency> getAllUniqueSubset(String str) {
         ArrayList<Frequency> set = new ArrayList<Frequency>();
+
+        // System.out.println(str.length());
 
         for (int i = 0; i < str.length(); i++) {
             for (int j = 0; j < str.length() - i; j++) {
                 boolean flag = false;
-                String elem = str.substring(j, j + (i+1)).trim();
-                // System.out.println(elem);
+                String elem = str.substring(j, j + (i+1));
 //                if (!set.contains(elem)) {
 //                    set.add(new Frequency(elem, 1));
 //                }
-
 
                 if (elem.isEmpty())
                     continue;
@@ -108,6 +236,33 @@ public class Main {
                     continue;
                 if (elem.contains("\n"))
                     continue;
+
+                if ((j - 1) >= 0) {
+                    if (str.charAt(j - 1) != ' '
+                            && str.charAt(j - 1) != '\n'
+                            && str.charAt(j - 1) != '.')
+                        continue;
+                }
+
+                if ((j + (i + 1)) < str.length()) {
+                    if (str.charAt(j + (i + 1)) != ' '
+                            && str.charAt(j + (i + 1)) != '\n'
+                            && str.charAt(j + (i + 1)) != ';')
+                        continue;
+
+                    //  System.out.println(str.charAt(j - 1) + " " + elem + " " + str.charAt(j + (i + 1)));
+                }
+
+//                if ((j - 1) >= 0 && (j + (i + 1)) < str.length())
+//                    System.out.println(str.charAt(j - 1) + " " + elem + " " + str.charAt(j + (i + 1)));
+//                else System.out.println("false: " + elem);
+
+                // elem = elem.trim();
+//                else {
+//                    continue;
+//                }
+
+                // System.out.println(elem);
 
                 int k = 0;
                 for ( ; k < set.size(); k++) {
@@ -122,12 +277,18 @@ public class Main {
                     set.remove(k);
                     frequency.setFrequency(frequency.getFrequency() + 1);
                     set.add(frequency);
+
+                    // System.out.println(frequency);
                 } else {
-                    set.add(new Frequency(elem, 1));
+                    Frequency frequency = new Frequency(elem, 1);
+                    set.add(frequency);
+
+                    // System.out.println(frequency);
                 }
                 // set.add(elem);
             }
         }
+
         return set;
     }
 
@@ -192,7 +353,7 @@ public class Main {
             // System.out.println("Ok! :D");
             return count;
         } else {
-            System.out.println(lexer.errorMessage());
+            // System.out.println(lexer.errorMessage());
             return -1;
         }
     }

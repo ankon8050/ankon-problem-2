@@ -2,6 +2,7 @@ package com.ankon.problem2;
 
 import com.ankon.problem2.domain.Frequency;
 import com.ankon.problem2.domain.Result;
+import com.ankon.problem2.domain.ResultSet;
 import com.ankon.problem2.lexer.Lexer;
 
 import java.io.BufferedReader;
@@ -15,6 +16,7 @@ import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.util.*;
 
+import com.google.common.collect.Sets;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang.StringUtils;
 
@@ -22,10 +24,13 @@ import java.util.regex.Pattern;
 
 import static java.lang.System.exit;
 import static java.lang.System.in;
+import static java.lang.System.setOut;
 
 public class Main {
     static ArrayList<Result> results = new ArrayList<>();
     static ArrayList<Frequency> tokens = new ArrayList<>();
+
+    static List<ResultSet> resultSets = new ArrayList<>();
 
     static String username, password;
 
@@ -60,10 +65,15 @@ public class Main {
                         }
 
                         generateResultSet();
+
+                        resultSets.add(new ResultSet(results));
                     }
 
-                    System.out.println("\n\n");
+                    // System.out.println("\n\n");
                 }
+
+                listCommonSequences();
+
                 System.out.println("--------------------Substring Tokenize---------------------");
 
                 System.out.println("--------------------LCS string---------------------");
@@ -93,12 +103,6 @@ public class Main {
                 System.out.println("--------------------LCS set---------------------");
             }
 
-
-//            contents[0] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/FetchCommit.java");
-//            contents[1] = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/domain/Result.java");
-
-//            String content = fetchGitFile("https://gitlab.com/ankon/problem-1/raw/master/src/main/java/com/ankon/problem1/FetchCommit.java");
-//            String content = readFile("Input.java", Charset.defaultCharset());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -248,15 +252,10 @@ public class Main {
                     tokens.remove(k);
                     temp.setFrequency(temp.getFrequency() + 1);
                     tokens.add(temp);
-
-                    // System.out.println(frequency);
                 } else if (!flag && !skip) {
                     temp = new Frequency(temp.getSubString(), 1);
                     tokens.add(temp);
-
-                    // System.out.println(frequency);
                 }
-                // System.out.println(temp.getSubString() + " " + count);
             }
 
 //            ArrayList<String> substrings = new ArrayList<>();
@@ -285,16 +284,18 @@ public class Main {
 
     static void generateResultSet() {
         for (Frequency token: tokens) {
-            if (token.getFrequency() <= 1)
+            if (token.getFrequency() <= 1) {
+                // System.out.println(token);
                 continue;
+            }
 
             Result result = countScore(token);
-            if (result != null && result.getScore() != 0.0)
+            if (result != null && result.getCount() > 1)
                 results.add(result);
         }
 
         for (Result result: results) {
-            System.out.println(result.getScore() + " " + result.getTokens() + " " + result.getCount() + " " + result.getSourceCode());
+//            System.out.println(result.getScore() + " " + result.getTokens() + " " + result.getCount() + " " + result.getSourceCode());
         }
     }
 
@@ -332,8 +333,6 @@ public class Main {
 
         // System.out.println(str.length());
 
-        str.replaceAll("\\s+", " ");
-
         for (int i = 0; i < str.length(); i++) {
             for (int j = 0; j < str.length() - i; j++) {
                 boolean flag = false;
@@ -349,12 +348,18 @@ public class Main {
                 if (elem.contains("\n"))
                     continue;
 
+//                if (elem.contains("for"))
+//                    System.out.println(elem);
+
                 if ((j - 1) >= 0) {
                     if (str.charAt(j - 1) != ' '
                             && str.charAt(j - 1) != '\n'
                             && str.charAt(j - 1) != '.')
                         continue;
                 }
+
+//                if (elem.contains("for"))
+//                    System.out.println(elem);
 
                 if ((j + (i + 1)) < str.length()) {
                     if (str.charAt(j + (i + 1)) != ' '
@@ -364,6 +369,9 @@ public class Main {
 
                     //  System.out.println(str.charAt(j - 1) + " " + elem + " " + str.charAt(j + (i + 1)));
                 }
+
+//                if (elem.contains("for"))
+//                    System.out.println(elem + "\n");
 
 //                if ((j - 1) >= 0 && (j + (i + 1)) < str.length())
 //                    System.out.println(str.charAt(j - 1) + " " + elem + " " + str.charAt(j + (i + 1)));
@@ -376,27 +384,29 @@ public class Main {
 
                 // System.out.println(elem);
 
-                int k = 0;
-                for ( ; k < set.size(); k++) {
-                    if (set.get(k).getSubString().equals(elem)) {
-                        flag = true;
-                        break;
-                    }
-                }
-
-                if (flag) {
-                    Frequency frequency = set.get(k);
-                    set.remove(k);
-                    frequency.setFrequency(frequency.getFrequency() + 1);
-                    set.add(frequency);
-
-                    // System.out.println(frequency);
-                } else {
-                    Frequency frequency = new Frequency(elem, 1);
-                    set.add(frequency);
-
-                    // System.out.println(frequency);
-                }
+                Frequency frequency = new Frequency(elem, 1);
+                set.add(frequency);
+//                int k = 0;
+//                for ( ; k < set.size(); k++) {
+//                    if (set.get(k).getSubString().equals(elem)) {
+//                        flag = true;
+//                        break;
+//                    }
+//                }
+//
+//                if (flag) {
+//                    Frequency frequency = set.get(k);
+//                    set.remove(k);
+//                    frequency.setFrequency(frequency.getFrequency() + 1);
+//                    set.add(frequency);
+//
+//                    // System.out.println(frequency);
+//                } else {
+//                    Frequency frequency = new Frequency(elem, 1);
+//                    set.add(frequency);
+//
+//                    // System.out.println(frequency);
+//                }
                 // set.add(elem);
             }
         }
@@ -483,6 +493,67 @@ public class Main {
             return new Result(Double.parseDouble(df.format(score)), tokens, frequency.getFrequency(), frequency.getSubString());
 
         return null;
+    }
+
+    static void listCommonSequences() {
+        if (resultSets == null || resultSets.size() <= 0)
+            return;
+
+        List<Frequency> frequencies = new ArrayList<>();
+
+        List<List<String>> sets = new ArrayList<>();
+
+        for (int i = 0; i < resultSets.size(); i++) {
+            List<String> temp = new ArrayList<>();
+            for (Result result: resultSets.get(i).getResults()) {
+                temp.add(result.getSourceCode());
+            }
+            sets.add(temp);
+        }
+
+        Set<String> common = intersection(sets);
+        if (common != null && common.size() > 0) {
+            for (String st: common) {
+                // System.out.println(st);
+                Frequency frequency = new Frequency(st, 0);
+                for (ResultSet resultSet: resultSets) {
+                    for (Result result: resultSet.getResults()) {
+                        if (result.getSourceCode().equals(st)) {
+                            frequency.setFrequency(frequency.getFrequency() + result.getCount());
+                        }
+                    }
+                }
+                frequencies.add(frequency);
+            }
+        }
+
+        List<Result> commonSequences = new ArrayList<>();
+        if (frequencies != null && frequencies.size() > 0) {
+            for (Frequency frequency: frequencies) {
+                commonSequences.add(countScore(frequency));
+            }
+        }
+
+        for (Result result: commonSequences) {
+            System.out.println(result);
+        }
+
+        // System.out.println(intersection(sets).size());
+    }
+
+    static Set<String> intersection(List<List<String>> lists) {
+        Set<String> intersection = new HashSet<>(lists.get(0));
+        for(List<String> list : lists) {
+            Set<String> newIntersection = new HashSet<>();
+            for(String i : list) {
+                if(intersection.contains(i)) {
+                    newIntersection.add(i);
+                }
+            }
+            intersection = newIntersection;
+        }
+
+        return intersection;
     }
 
 }
